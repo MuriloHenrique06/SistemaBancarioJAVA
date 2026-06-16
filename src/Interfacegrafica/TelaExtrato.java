@@ -78,27 +78,50 @@ public class TelaExtrato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        btnModificar = new javax.swing.JButton();
         lblId = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
-        lblNome = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
-        pnlExtrato = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblExtrato = new javax.swing.JTable();
-        btnModificar = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnFechar = new javax.swing.JButton();
+        txtNome = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         btnDepositar = new javax.swing.JButton();
         btnSacar = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 0, 51));
 
+        jPanel1.setBackground(new java.awt.Color(17, 17, 17));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnModificar.setBackground(new java.awt.Color(17, 17, 17));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfacegrafica/person.png"))); // NOI18N
+        btnModificar.addActionListener(this::btnModificarActionPerformed);
+        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
+
+        lblId.setBackground(new java.awt.Color(255, 255, 255));
+        lblId.setForeground(new java.awt.Color(255, 255, 255));
         lblId.setText("ID:");
+        jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, -1));
 
         txtId.setEditable(false);
+        txtId.setBackground(new java.awt.Color(51, 51, 51));
+        txtId.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(255, 255, 255));
+        txtId.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
+        jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, 30));
 
-        lblNome.setText("Nome:");
-
-        txtNome.setEditable(false);
-
+        tblExtrato.setBackground(new java.awt.Color(51, 51, 51));
+        tblExtrato.setForeground(new java.awt.Color(255, 255, 255));
         tblExtrato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -107,97 +130,129 @@ public class TelaExtrato extends javax.swing.JFrame {
                 "Data/Hora", "Valor", "Tipo"
             }
         ));
+        tblExtrato.setGridColor(new java.awt.Color(204, 0, 204));
+        tblExtrato.setSelectionForeground(new java.awt.Color(51, 51, 51));
         jScrollPane1.setViewportView(tblExtrato);
 
-        javax.swing.GroupLayout pnlExtratoLayout = new javax.swing.GroupLayout(pnlExtrato);
-        pnlExtrato.setLayout(pnlExtratoLayout);
-        pnlExtratoLayout.setHorizontalGroup(
-            pnlExtratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlExtratoLayout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 444, 275));
+
+        jPanel3.setBackground(new java.awt.Color(17, 17, 17));
+
+        jPanel4.setBackground(new java.awt.Color(58, 58, 58));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 3, Short.MAX_VALUE)
         );
-        pnlExtratoLayout.setVerticalGroup(
-            pnlExtratoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlExtratoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(306, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        btnModificar.setText("Modificar");
-        btnModificar.addActionListener(this::btnModificarActionPerformed);
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Extrato de Movimentações");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Confira abaixo seu histórico de transações");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
+
+        btnFechar.setBackground(new java.awt.Color(17, 17, 17));
+        btnFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/left-arrow.png"))); // NOI18N
+        btnFechar.addActionListener(this::btnFecharActionPerformed);
+        jPanel1.add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
+
+        txtNome.setEditable(false);
+        txtNome.setBackground(new java.awt.Color(51, 51, 51));
+        txtNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNome.setForeground(new java.awt.Color(255, 255, 255));
+        txtNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
+        jPanel1.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, 240, 30));
+
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Nome:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+
+        btnDepositar.setBackground(new java.awt.Color(0, 120, 60));
+        btnDepositar.setForeground(new java.awt.Color(255, 255, 255));
         btnDepositar.setText("Depositar");
+        btnDepositar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
         btnDepositar.addActionListener(this::btnDepositarActionPerformed);
+        jPanel1.add(btnDepositar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 530, 205, 56));
 
+        btnSacar.setBackground(new java.awt.Color(0, 120, 60));
+        btnSacar.setForeground(new java.awt.Color(255, 255, 255));
         btnSacar.setText("Sacar");
+        btnSacar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
         btnSacar.addActionListener(this::btnSacarActionPerformed);
+        jPanel1.add(btnSacar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 530, 205, 56));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/imagemtela10.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 9, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addComponent(jLabel1)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 0, 380, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pnlExtrato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblId, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(btnModificar)
-                        .addComponent(btnDepositar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(1, 1, 1)
-                        .addComponent(btnSacar)))
-                .addContainerGap(89, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 857, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblId)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNome)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnModificar))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(pnlExtrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(btnDepositar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnSacar)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        // TODO add your handling code here:
-         int id = Integer.parseInt(txtId.getText());
-        TelaCadastro telaCadastro = new TelaCadastro(id);
-        telaCadastro.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnModificarActionPerformed
-
-    private void btnDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositarActionPerformed
-        int id = Integer.parseInt(txtId.getText());
-        TelaMovimentacao telaMovimentacao = new TelaMovimentacao(id, "D", this.login);
-        telaMovimentacao.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_btnDepositarActionPerformed
 
     private void btnSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSacarActionPerformed
         // TODO add your handling code here:
@@ -206,6 +261,26 @@ public class TelaExtrato extends javax.swing.JFrame {
         telaMovimentacao.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnSacarActionPerformed
+
+    private void btnDepositarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDepositarActionPerformed
+        int id = Integer.parseInt(txtId.getText());
+        TelaMovimentacao telaMovimentacao = new TelaMovimentacao(id, "D", this.login);
+        telaMovimentacao.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDepositarActionPerformed
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        new TelaLogin().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
+
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
+        // TODO add your handling code here:
+        int id = Integer.parseInt(txtId.getText());
+        TelaCadastro telaCadastro = new TelaCadastro(id);
+        telaCadastro.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnModificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,12 +309,20 @@ public class TelaExtrato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDepositar;
+    private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnSacar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblId;
-    private javax.swing.JLabel lblNome;
-    private javax.swing.JPanel pnlExtrato;
     private javax.swing.JTable tblExtrato;
     private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtNome;

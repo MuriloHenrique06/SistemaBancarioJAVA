@@ -55,35 +55,41 @@ public class TelaCadastro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPasswordField1 = new javax.swing.JPasswordField();
-        lblConfirmar = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
-        txtNome = new javax.swing.JTextField();
-        txtEmail = new javax.swing.JTextField();
-        txtSenha = new javax.swing.JPasswordField();
-        txtConfirmar = new javax.swing.JPasswordField();
+        jPanel1 = new javax.swing.JPanel();
         txtDataNascimento = new javax.swing.JFormattedTextField();
         lblID = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         lblNome = new javax.swing.JLabel();
         lblCelular = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
+        lblConfirmar = new javax.swing.JLabel();
         lblDataNascimento = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
+        txtNome = new javax.swing.JTextField();
         lblSenha = new javax.swing.JLabel();
         btnApagar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        txtSenha = new javax.swing.JPasswordField();
+        txtConfirmar = new javax.swing.JPasswordField();
         txtCelular = new javax.swing.JFormattedTextField();
+        jLabel1 = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        btnFechar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         jPasswordField1.setText("jPasswordField1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblConfirmar.setText("Confirmar Senha:");
+        jPanel1.setBackground(new java.awt.Color(17, 17, 17));
 
-        txtID.setEditable(false);
-        txtID.setEnabled(false);
-
-        txtNome.addActionListener(this::txtNomeActionPerformed);
-
+        txtDataNascimento.setBackground(new java.awt.Color(51, 51, 51));
+        txtDataNascimento.setBorder(null);
+        txtDataNascimento.setForeground(new java.awt.Color(255, 255, 255));
         try {
             txtDataNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
@@ -91,225 +97,367 @@ public class TelaCadastro extends javax.swing.JFrame {
         }
         txtDataNascimento.addActionListener(this::txtDataNascimentoActionPerformed);
 
+        lblID.setForeground(new java.awt.Color(255, 255, 255));
         lblID.setText("ID:");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Crie sua conta e aproveite todos os beneficios do FlowBank");
+
+        lblNome.setForeground(new java.awt.Color(255, 255, 255));
         lblNome.setText("Nome:");
 
+        lblCelular.setForeground(new java.awt.Color(255, 255, 255));
         lblCelular.setText("Celular:");
 
+        lblEmail.setForeground(new java.awt.Color(255, 255, 255));
         lblEmail.setText("E-mail:");
 
+        lblConfirmar.setForeground(new java.awt.Color(255, 255, 255));
+        lblConfirmar.setText("Confirmar Senha:");
+
+        lblDataNascimento.setForeground(new java.awt.Color(255, 255, 255));
         lblDataNascimento.setText("Data Nascimento:");
 
-        btnCadastrar.setText("Cadastrar");
+        txtID.setEditable(false);
+        txtID.setBackground(new java.awt.Color(51, 51, 51));
+        txtID.setForeground(new java.awt.Color(51, 51, 51));
+        txtID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        txtID.setCaretColor(new java.awt.Color(0, 0, 0));
+        txtID.setEnabled(false);
+
+        btnCadastrar.setBackground(new java.awt.Color(0, 120, 60));
+        btnCadastrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnCadastrar.setText("Criar Conta");
+        btnCadastrar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
         btnCadastrar.addActionListener(this::btnCadastrarActionPerformed);
 
+        txtNome.setBackground(new java.awt.Color(51, 51, 51));
+        txtNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtNome.setForeground(new java.awt.Color(255, 255, 255));
+        txtNome.setBorder(null);
+        txtNome.addActionListener(this::txtNomeActionPerformed);
+
+        lblSenha.setForeground(new java.awt.Color(255, 255, 255));
         lblSenha.setText("Senha:");
 
+        btnApagar.setBackground(new java.awt.Color(255, 0, 0));
+        btnApagar.setForeground(new java.awt.Color(255, 255, 255));
         btnApagar.setText("Apagar");
         btnApagar.addActionListener(this::btnApagarActionPerformed);
 
-        btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(this::btnCancelarActionPerformed);
+        txtSenha.setBackground(new java.awt.Color(51, 51, 51));
+        txtSenha.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtSenha.setForeground(new java.awt.Color(255, 255, 255));
+        txtSenha.setBorder(null);
 
+        txtConfirmar.setBackground(new java.awt.Color(51, 51, 51));
+        txtConfirmar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtConfirmar.setForeground(new java.awt.Color(255, 255, 255));
+        txtConfirmar.setBorder(null);
+        txtConfirmar.addActionListener(this::txtConfirmarActionPerformed);
+
+        txtCelular.setBackground(new java.awt.Color(51, 51, 51));
+        txtCelular.setBorder(null);
+        txtCelular.setForeground(new java.awt.Color(255, 255, 255));
         try {
             txtCelular.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        txtCelular.setText(" (  )      -    ");
+        txtCelular.addActionListener(this::txtCelularActionPerformed);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 38)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 51));
+        jLabel1.setText("ÁREA DE CADASTRO");
+
+        txtEmail.setBackground(new java.awt.Color(51, 51, 51));
+        txtEmail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(255, 255, 255));
+        txtEmail.setBorder(null);
+
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("ou");
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Já possui uma conta? Entrar");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        btnFechar.setBackground(new java.awt.Color(17, 17, 17));
+        btnFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/left-arrow.png"))); // NOI18N
+        btnFechar.addActionListener(this::btnFecharActionPerformed);
+
+        jPanel3.setBackground(new java.awt.Color(17, 17, 17));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/telablack3.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 14, Short.MAX_VALUE)
+                .addComponent(jLabel3))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel3))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblID, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtSenha)
+                                .addComponent(txtConfirmar)
+                                .addComponent(btnCadastrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(btnApagar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(75, 75, 75)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(12, 12, 12)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(247, 247, 247)
+                        .addComponent(jLabel4))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(btnFechar)))
+                .addGap(54, 54, 54)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(btnFechar)
+                .addGap(16, 16, 16)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNome)
+                    .addComponent(lblID))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtNome, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(txtID))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblCelular)
+                    .addComponent(lblDataNascimento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblEmail)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblSenha)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblConfirmar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(btnCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnApagar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnApagar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCadastrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnCancelar)
-                        .addGap(13, 13, 13))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                            .addComponent(lblEmail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblCelular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblNome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblSenha, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblConfirmar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtID)
-                            .addComponent(txtNome)
-                            .addComponent(txtEmail)
-                            .addComponent(txtSenha)
-                            .addComponent(txtConfirmar)
-                            .addComponent(txtDataNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                            .addComponent(txtCelular))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblID)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNome)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblCelular)
-                    .addComponent(txtCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEmail)
-                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDataNascimento)
-                    .addComponent(txtDataNascimento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblSenha)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblConfirmar)
-                    .addComponent(txtConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCadastrar)
-                    .addComponent(btnApagar)
-                    .addComponent(btnCancelar))
-                .addContainerGap(7, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        TelaLogin telaLogin = new TelaLogin();
+        telaLogin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCelularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCelularActionPerformed
+
+    private void txtConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConfirmarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtConfirmarActionPerformed
+
+    private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
+
+        int resposta = JOptionPane.showConfirmDialog(this, "Deseja realmente apagar os campos?");
+        if (resposta == JOptionPane.YES_OPTION) {
+            txtID.setText("");
+            txtNome.setText("");
+            txtCelular.setText("");
+            txtDataNascimento.setText("");
+            txtEmail.setText("");
+            txtSenha.setText("");
+            txtConfirmar.setText("");
+}
+    }//GEN-LAST:event_btnApagarActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
+
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        String nome = txtNome.getText();
+       String nome = txtNome.getText();
         String celular = txtCelular.getText();
         String email = txtEmail.getText();
         String dataNascimento = txtDataNascimento.getText();
         String senha = new String(txtSenha.getPassword());
         String confirmar = new String(txtConfirmar.getPassword());
-        String mensagem = "";        
+        String mensagem = "";
         if (nome.equals("")) {
-            mensagem += "Nome obrigat�rio\n";
+            mensagem += "Nome obrigatório\n";
         }
         String regexCel = "^\\(?\\d{2}\\)?\\s?9\\d{4}-?\\d{4}$";
         if (!celular.matches(regexCel)) {
-            mensagem += "Celular inv�lido\n";
+            mensagem += "Celular inválido\n";
         }
-        String regexEmail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";        
+        String regexEmail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$";
         if (!email.matches(regexEmail)) {
-            mensagem += "E-mail inv�lido\n";
+            mensagem += "E-mail inválido\n";
         }
-        String regexData = "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
+        String regexData =
+        "^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$";
         if (!dataNascimento.matches(regexData)) {
-            mensagem += "Data de nascimento inv�lida\n";
+            mensagem += "Data de nascimento inválida\n";
         }
-        if (senha.equals("")){
-            mensagem += "Senha obrigat�rio\n";
+        if (senha.equals("")) {
+            mensagem += "Senha obrigatória\n";
         }
         if (mensagem.equals("")) {
             if (!senha.equals(confirmar)) {
                 mensagem += "Senha diferente de Confirmar";
-                JOptionPane.showMessageDialog(this,
-                    mensagem);
-            }
-            else {
+                JOptionPane.showMessageDialog(this, mensagem);
+            } else {
                 try {
                     Cliente cliente = new Cliente();
                     cliente.setNome(nome);
                     cliente.setCelular(celular);
                     cliente.setEmail(email);
                     DateFormat df =
-                            new SimpleDateFormat("dd/MM/yyyy");
+                    new SimpleDateFormat("dd/MM/yyyy");
                     Date nascimento =
-                            new Date(df.parse(dataNascimento).getTime());
+                    new Date(df.parse(dataNascimento).getTime());
                     cliente.setDataNascimento(nascimento);
                     cliente.setSenha(senha);
                     ClienteDAO clienteDAO = new ClienteDAO();
                     if (txtID.getText().equals("")) {
-                        clienteDAO.inserirCliente(cliente);
-                        JOptionPane.showMessageDialog(this,
-                            "Cliente cadastrado!");
+                        int id = clienteDAO.inserirCliente(cliente);
+                        if (id != -1) {
+                            JOptionPane.showMessageDialog(
+                                this,
+                                "Cliente cadastrado!"
+                            );
+                            TelaLogin telaLogin = new TelaLogin();
+                            telaLogin.setVisible(true);
+                            this.dispose();
+                        }
+                    } else {
+                        cliente.setId(
+                            Integer.parseInt(txtID.getText())
+                        );
+                        clienteDAO.modificarCliente(cliente);
+                        JOptionPane.showMessageDialog(
+                            this,
+                            "Cliente modificado!"
+                        );
                         TelaLogin telaLogin = new TelaLogin();
                         telaLogin.setVisible(true);
+                        this.dispose();
                     }
-                    else {
-                        cliente.setId(Integer.parseInt(txtID.getText()));
-                        clienteDAO.modificarCliente(cliente);
-                        JOptionPane.showMessageDialog(this,
-                            "Cliente modificado!");
-                        TelaExtrato telaExtrato =
-                                new TelaExtrato(cliente.getEmail());
-                        telaExtrato.setVisible(true);
-                    }
-                    this.dispose();
                 } catch (ParseException ex) {
-                    JOptionPane.showMessageDialog(this,
-                            "Data inv�lida!");
+                    JOptionPane.showMessageDialog(
+                        this,
+                        "Data inválida!"
+                    );
                 }
             }
+        } else {
+            JOptionPane.showMessageDialog(
+                this,
+                "Campos com problemas:\n" + mensagem
+            );
         }
-        else{
-            JOptionPane.showMessageDialog(this,
-                    "Campos com problemas:\n" + mensagem);
-        }
-       
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void txtDataNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDataNascimentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDataNascimentoActionPerformed
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
-
-    private void btnApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarActionPerformed
-                                                 
-    int resposta = JOptionPane.showConfirmDialog(this, 
-            "Deseja realmente apagar?");
-
-    if (resposta == JOptionPane.YES_OPTION){
-        ClienteDAO clienteDAO = new ClienteDAO();
-        clienteDAO.apagarCliente(Integer.parseInt(txtID.getText()));
-
-        JOptionPane.showMessageDialog(this,
-                "Cliente apagado com sucesso!");
-
-        TelaLogin telaLogin = new TelaLogin();
-        telaLogin.setVisible(true);
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        new Tela03().setVisible(true);
         this.dispose();
-    }
-
-        
-         
-    }//GEN-LAST:event_btnApagarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-         if (txtID.getText().equals("")){
-            TelaLogin telaLogin = new TelaLogin();
-            telaLogin.setVisible(true);
-            this.dispose();
-        }
-        else{
-            TelaExtrato telaExtrato = new TelaExtrato();
-            telaExtrato.setVisible(true);
-            this.dispose();
-        }
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,7 +487,15 @@ public class TelaCadastro extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnApagar;
     private javax.swing.JButton btnCadastrar;
-    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnFechar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JLabel lblCelular;
     private javax.swing.JLabel lblConfirmar;

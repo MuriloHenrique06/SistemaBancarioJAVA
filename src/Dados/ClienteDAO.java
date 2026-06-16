@@ -12,19 +12,53 @@ public class ClienteDAO {
     public ClienteDAO() {
         this.conexao = new ConexaoBD().getConnection();
     }
-    public void inserirCliente(Cliente cliente) {
+
+    public boolean emailJaCadastrado(String email) {
+        String sql = "SELECT COUNT(*) FROM cliente WHERE email = ?";
+        try {
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+            ps.close();
+        }
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null,
+                    "Erro ao verificar e-mail!");
+            throw new RuntimeException(e);
+        }
+        return false;
+    }
+
+    public int inserirCliente(Cliente cliente) {
+        if (emailJaCadastrado(cliente.getEmail())) {
+            JOptionPane.showMessageDialog(null,
+                    "Este e-mail já está cadastrado!",
+                    "E-mail duplicado",
+                    JOptionPane.WARNING_MESSAGE);
+            return -1;
+        }
+
         String sql = "INSERT INTO cliente " +
                   "(nome, celular, email, nascimento," + 
                   "senha) VALUES (?, ?, ?, ?, ?)";
         try {
-            PreparedStatement ps = conexao.prepareStatement(sql);
+            PreparedStatement ps = conexao.prepareStatement(sql,
+                    PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getCelular());
             ps.setString(3, cliente.getEmail());
             ps.setDate(4, cliente.getDataNascimento());
             ps.setString(5, cliente.getSenha());
             ps.execute();
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
             ps.close();
+            return -1;
         }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null,
@@ -32,6 +66,7 @@ public class ClienteDAO {
             throw new RuntimeException(e);
         }
     }
+
     public boolean logarCliente(String usuario, String senha) {
         String sql = "SELECT * FROM cliente " +
                     " WHERE email = ? AND senha = ?";
@@ -129,7 +164,6 @@ public class ClienteDAO {
                     "Erro ao modificar cliente!");
             throw new RuntimeException(e);
         }
-        
     }
 
     public void apagarCliente(int id) {
@@ -148,5 +182,4 @@ public class ClienteDAO {
             throw new RuntimeException(e);
         }
     }
-    
 }

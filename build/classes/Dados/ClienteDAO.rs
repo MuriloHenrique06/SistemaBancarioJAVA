@@ -1,0 +1,4 @@
+algoritmosprogramacao.dados.ClienteDAO
+dados.ClienteDAO$ClienteDAO
+dados.ClienteDAO
+dados.ConexaoBD

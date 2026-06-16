@@ -71,28 +71,32 @@ public class LancamentosDAO {
         }
     }
 
-    public void sacar(int id, double valor) {
-        String sql = "INSERT INTO lancamentos"
-                + "(id_cliente, valor, tipo)"
-                + " VALUES (?, ?, ?)";
-        try{
-            double resultado = verificarSaldo(id);
-            if (resultado >= valor) {
-                PreparedStatement ps = conexao.prepareStatement(sql);
-                ps.setInt(1, id);
-                ps.setDouble(2, valor);
-                ps.setString(3, "D");
-                ps.execute();
-            }
-            else {
-                JOptionPane.showMessageDialog(null,
-                        "Saldo insuficiente!");
-            }
+    public boolean sacar(int id, double valor) {
+    String sql = "INSERT INTO lancamentos"
+            + "(id_cliente, valor, tipo)"
+            + " VALUES (?, ?, ?)";
+
+    try {
+        double resultado = verificarSaldo(id);
+
+        if (resultado >= valor) {
+            PreparedStatement ps = conexao.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setDouble(2, valor);
+            ps.setString(3, "D");
+            ps.execute();
+
+            return true;
+        } else {
+            JOptionPane.showMessageDialog(null,
+                    "Saldo insuficiente!");
+            return false;
         }
-        catch(SQLException e) {
-            JOptionPane.showMessageDialog(null, "Erro ao sacar!");
-            throw new RuntimeException(e);
-        }
+    }
+    catch(SQLException e) {
+        JOptionPane.showMessageDialog(null, "Erro ao sacar!");
+        throw new RuntimeException(e);
+    }
     }
     
     private double verificarSaldo(int id){

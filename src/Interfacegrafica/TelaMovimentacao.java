@@ -32,7 +32,7 @@ public class TelaMovimentacao extends javax.swing.JFrame {
         this.tipo = tipo;
         this.login = login;
         if (tipo.equals("D")) {
-            lblMovimentacao.setText("Dep�sito");
+            lblMovimentacao.setText("Deposito");
             btnMovimentacao.setText("Depositar");
         }
         else {
@@ -50,82 +50,130 @@ public class TelaMovimentacao extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblMovimentacao = new javax.swing.JLabel();
-        lblValor = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         txtValor = new javax.swing.JTextField();
         btnMovimentacao = new javax.swing.JButton();
+        lblMovimentacao = new javax.swing.JLabel();
+        lblValor = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        btnFechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        lblMovimentacao.setText("Depósito");
+        jPanel1.setBackground(new java.awt.Color(17, 17, 17));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblValor.setText("Valor:");
+        txtValor.setBackground(new java.awt.Color(17, 17, 17));
+        txtValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        txtValor.setForeground(new java.awt.Color(255, 255, 255));
+        txtValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 51, 51)));
+        txtValor.addActionListener(this::txtValorActionPerformed);
+        jPanel1.add(txtValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 283, 58));
 
-        btnMovimentacao.setText("Depositar");
+        btnMovimentacao.setBackground(new java.awt.Color(0, 120, 60));
+        btnMovimentacao.setForeground(new java.awt.Color(255, 255, 255));
+        btnMovimentacao.setText("  Depositar Agora");
         btnMovimentacao.addActionListener(this::btnMovimentacaoActionPerformed);
+        jPanel1.add(btnMovimentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, 283, 58));
+
+        lblMovimentacao.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblMovimentacao.setForeground(new java.awt.Color(255, 255, 255));
+        lblMovimentacao.setText("DEPOSITAR");
+        jPanel1.add(lblMovimentacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 283, -1));
+
+        lblValor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblValor.setForeground(new java.awt.Color(255, 255, 255));
+        lblValor.setText("Valor:");
+        jPanel1.add(lblValor, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, 90, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Informe o valor que deseja para continuar");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("sua transação.");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, -10, -1, 630));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/teladeposito.PNG"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/logobranca (1).png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, 60));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfacegrafica/segura.PNG"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, -1, 30));
+
+        btnFechar.setBackground(new java.awt.Color(17, 17, 17));
+        btnFechar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/left-arrow.png"))); // NOI18N
+        btnFechar.addActionListener(this::btnFecharActionPerformed);
+        jPanel1.add(btnFechar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnMovimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(lblMovimentacao, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(lblValor, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(166, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblMovimentacao)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblValor)
-                    .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(btnMovimentacao)
-                .addContainerGap(189, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnMovimentacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMovimentacaoActionPerformed
-        try{
-            double valor = Double.parseDouble(txtValor.getText());
-            LancamentosDAO lancamentosDAO = new LancamentosDAO();
-            if (valor <= 0) {
-                JOptionPane.showMessageDialog(this,
+      try {
+        double valor = Double.parseDouble(txtValor.getText());
+        LancamentosDAO lancamentosDAO = new LancamentosDAO();
+        if (valor <= 0) {
+            JOptionPane.showMessageDialog(this,
                     "Digite um valor maior que zero!");
-            }
-            else {
-                if (this.tipo.equals("D")) {
-                    lancamentosDAO.depositar(this.id, valor);
-                    JOptionPane.showMessageDialog(this,
-                        "Dep�sito realizado com sucesso!");
-                }
-                else {
-                    lancamentosDAO.sacar(this.id, valor);
-                    JOptionPane.showMessageDialog(this,
-                        "Saque realizado com sucesso!");
-                }
+        } else {
+            if (this.tipo.equals("D")) {
+                lancamentosDAO.depositar(this.id, valor);
+                JOptionPane.showMessageDialog(this,
+                        "Depósito realizado com sucesso!");
                 TelaExtrato telaExtrato = new TelaExtrato(this.login);
                 telaExtrato.setVisible(true);
                 this.dispose();
+            } else {
+                boolean saqueRealizado =
+                        lancamentosDAO.sacar(this.id, valor);
+                if (saqueRealizado) {
+                    JOptionPane.showMessageDialog(this,
+                            "Saque realizado com sucesso!");
+                    TelaExtrato telaExtrato =
+                            new TelaExtrato(this.login);
+                    telaExtrato.setVisible(true);
+                    this.dispose();
+                }
+               }
             }
-        }
-        catch(NumberFormatException e){
-            JOptionPane.showMessageDialog(this, "Digite um valor v�lido!");
-            throw new RuntimeException(e);
+            }
+    catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this,
+                "Digite um valor válido!");
         }
     }//GEN-LAST:event_btnMovimentacaoActionPerformed
+
+    private void txtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtValorActionPerformed
+
+    private void btnFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFecharActionPerformed
+        TelaExtrato telaExtrato = new TelaExtrato(this.login);
+        telaExtrato.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnFecharActionPerformed
 
     /**
      * @param args the command line arguments
@@ -153,7 +201,15 @@ public class TelaMovimentacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFechar;
     private javax.swing.JButton btnMovimentacao;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblMovimentacao;
     private javax.swing.JLabel lblValor;
     private javax.swing.JTextField txtValor;
